@@ -2,22 +2,27 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-  background-color: #f8ebd6;
+  background-color: #faf5ed;
 }
 body {
   font-size: 1.6rem;
   min-height:100vh;
   font-family: Helvetica, Arial, sans-serif;
+  width: 80%;
+  margin: auto;
 }
+
+/* ============================================*/
 /* Layout */
+
 .grid-container {
   display: grid;
   grid-template-areas:
-    "header"
-    "main"
-    "footer";
-  grid-template-columns: 1fr;
-  grid-template-rows: 5rem 1fr auto;
+    "header header"
+    "aside main"
+    "footer footer";
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 50px 1fr 50px;
   height: 100%;
 }
 header {
@@ -25,8 +30,12 @@ header {
   background-color: #eccb95;
 }
 main {
+  background-color: #f8ebd6;
   grid-area: main;
   padding: 1rem;
+}
+aside{
+  background-color:white;
 }
 footer {
   padding: 2rem;
@@ -35,6 +44,7 @@ footer {
   color: #6e323b;
 }
 
+/* ============================================*/
 /* Common */
 h1 {
   font-size: 1.8rem;
@@ -49,16 +59,17 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #dea241;
+  color: #fb9c02;
 }
 
+/* ============================================*/
 /* Header */
 header a {
-  color: #6e323b;
+  color: #7C4751;
   padding: 1rem;
 }
 a.brand {
-  color: #6e323b;
+  color: #7C4751;
   font-size: 3rem;
   font-weight: bold;
 }
@@ -81,6 +92,7 @@ img.medium {
   width: 100%;
 }
 
+/* ============================================*/
 /* Card */
 .card {
   border: 0.1rem #d7d0b7 solid;
@@ -98,6 +110,8 @@ img.medium {
 .price {
   font-size: 2rem;
 }
+
+/* ============================================*/
 /* Rating */
 .rating span {
   color: #f0c040;
