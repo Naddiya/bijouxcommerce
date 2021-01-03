@@ -1,39 +1,40 @@
+/* Generals */
 html {
   box-sizing: border-box;
-  font-size:62.5%;
+  font-size: 62.5%;
+  background-color: #f8ebd6;
 }
 body {
-  margin: 0;
-  height: 100vh;
   font-size: 1.6rem;
+  min-height:100vh;
   font-family: Helvetica, Arial, sans-serif;
-  background-color:#F8EBD6;
 }
-
 /* Layout */
 .grid-container {
   display: grid;
   grid-template-areas:
-    'header'
-    'main'
-    'footer';
+    "header"
+    "main"
+    "footer";
   grid-template-columns: 1fr;
-  grid-template-rows: 5rem 1fr 5rem;
+  grid-template-rows: 5rem 1fr auto;
   height: 100%;
 }
 header {
   grid-area: header;
-  background-color:#ECCB95;
+  background-color: #eccb95;
 }
 main {
   grid-area: main;
   padding: 1rem;
 }
 footer {
+  padding: 2rem;
   grid-area: footer;
-  background-color:#ECCB95;
-  color: #6E323B;
+  background-color: #eccb95;
+  color: #6e323b;
 }
+
 /* Common */
 h1 {
   font-size: 1.8rem;
@@ -42,21 +43,22 @@ h1 {
 h2 {
   font-size: 1.6rem;
   padding: 1rem 0;
+  color: darkslateblue;
 }
-
 a {
   text-decoration: none;
 }
 a:hover {
-  color: #ff8000;
+  color: #dea241;
 }
+
 /* Header */
 header a {
-  color: #6E323B;
+  color: #6e323b;
   padding: 1rem;
 }
 a.brand {
-  color: #6E323B;
+  color: #6e323b;
   font-size: 3rem;
   font-weight: bold;
 }
@@ -69,9 +71,10 @@ a.brand {
 .row.center {
   justify-content: center;
 }
+
 /* Image */
 img {
-  border-radius: 0.5rem;
+  border-radius: 1rem 1rem 0 0;
 }
 img.medium {
   max-width: 29rem;
@@ -80,10 +83,11 @@ img.medium {
 
 /* Card */
 .card {
-  border: 0.1rem #D7D0B7 solid;
-  background-color: #FDF8F1;
-  border-radius: 0.5rem;
+  border: 0.1rem #d7d0b7 solid;
+  background-color: #fdf8f1;
+  border-radius: 1rem;
   margin: 1rem;
+  box-shadow: 0 8px 6px -6px black;
 }
 .card-body {
   padding: 1rem;
@@ -99,4 +103,3 @@ img.medium {
   color: #f0c040;
   margin: 0.1rem;
 }
-
