@@ -2,50 +2,16 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-  background-color: #faf5ed;
 }
 body {
   font-size: 1.6rem;
-  min-height:100vh;
-  font-family: Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+  font-family: "Crimson Pro", Arial, sans-serif;
   width: 80%;
   margin: auto;
 }
 
-/* ============================================*/
-/* Layout */
-
-.grid-container {
-  display: grid;
-  grid-template-areas:
-    "header header"
-    "aside main"
-    "footer footer";
-  grid-template-columns: 200px 1fr;
-  grid-template-rows: 50px 1fr 50px;
-  height: 100%;
-}
-header {
-  grid-area: header;
-  background-color: #eccb95;
-}
-main {
-  background-color: #f8ebd6;
-  grid-area: main;
-  padding: 1rem;
-}
-aside{
-  background-color:white;
-}
-footer {
-  padding: 2rem;
-  grid-area: footer;
-  background-color: #eccb95;
-  color: #6e323b;
-}
-
-/* ============================================*/
-/* Common */
+/* Commons */
 h1 {
   font-size: 1.8rem;
   padding: 1rem 0;
@@ -53,7 +19,7 @@ h1 {
 h2 {
   font-size: 1.6rem;
   padding: 1rem 0;
-  color: darkslateblue;
+  color: #5f5658;
 }
 a {
   text-decoration: none;
@@ -62,14 +28,48 @@ a:hover {
   color: #fb9c02;
 }
 
-/* ============================================*/
-/* Header */
-header a {
-  color: #7C4751;
+/* Layout */
+.grid-container {
+  background-color: #fff1cd;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "aside main"
+    "footer footer";
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 150px 1fr 50px;
+  height: 100%;
+}
+header {
+  grid-area: header;
+}
+main {
+  grid-area: main;
+  background-color: #f3d99d;
   padding: 1rem;
 }
+aside {
+  /* border: solid #e2dcdc 0.1px; */
+  background-color: #faf5ed;
+}
+aside ul li {
+  color: #5f5658;
+  display: grid;
+  grid-template-rows: 100px 1fr 10px;
+}
+
+footer {
+  padding: 2rem;
+  grid-area: footer;
+  color: #ff7893;
+}
+
+/* Header */
+header a {
+  margin: 2rem;
+  color: #ff7893;
+}
 a.brand {
-  color: #7C4751;
   font-size: 3rem;
   font-weight: bold;
 }
@@ -84,20 +84,17 @@ a.brand {
 }
 
 /* Image */
-img {
-  border-radius: 1rem 1rem 0 0;
-}
 img.medium {
   max-width: 29rem;
   width: 100%;
 }
+img.logo {
+  max-width: 200px;
+}
 
-/* ============================================*/
 /* Card */
 .card {
-  border: 0.1rem #d7d0b7 solid;
   background-color: #fdf8f1;
-  border-radius: 1rem;
   margin: 1rem;
   box-shadow: 0 8px 6px -6px black;
 }
@@ -109,11 +106,12 @@ img.medium {
 }
 .price {
   font-size: 2rem;
+  color: #f0c040;
 }
 
-/* ============================================*/
 /* Rating */
 .rating span {
+  display: none;
   color: #f0c040;
   margin: 0.1rem;
 }
