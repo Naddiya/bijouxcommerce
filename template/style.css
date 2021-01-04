@@ -66,8 +66,9 @@ footer {
 
 /* Header */
 header a {
-  margin: 2rem;
+  margin: 4rem;
   color: #ff7893;
+  font-size: 1.2em;
 }
 a.brand {
   font-size: 3rem;
@@ -96,7 +97,7 @@ img.logo {
 .card {
   background-color: #fdf8f1;
   margin: 1rem;
-  box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px grey;
 }
 .card-body {
   padding: 1rem;
